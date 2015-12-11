@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagina de suma</title>
+</head>
+<body>
+<form action="/sumar/" method="get">
+  {% csrf_token %}
+  Numero 1:
+  <br>
+  <input type="number" name="n1" value="{{n1}}" required>
+  <br>
+  Numero 2:
+  <br>
+  <input type="number" name="n2" value="{{n2}}" required>
+  <br>
+  <input type="submit" value="Sumar">
+</form>
+<div>
+{% if res %}
+ El resultado es: {{res}}
+{% endif %}
+
+</div>
+</body>
+</html>

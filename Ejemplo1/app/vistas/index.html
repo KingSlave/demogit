@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagina index</title>
+  {% load static from staticfiles  %}
+  <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+  <h1>Hola mundo!!</h1>
+  <div>
+    {% if n == 2 %}
+      <h3>Parte verdadera</h3>
+    {% else %}
+      <h3>Parte falsa</h3>
+    {% endif %}
+
+  {# Valor = {{cadena|default:'No hay valor'}} #}
+
+  {% for c in variable %}
+      <h2>Mensaje</h2>
+  {% endfor %}
+  </div>
+</body>
+</html>
